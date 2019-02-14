@@ -26,7 +26,7 @@ contract DaughterContract is Ownable {
     canDate = true;
   }
 
-  function howMuch() public returns (uint) {
+  function howMuch() public view returns (uint) {
     return allowance;
   }
 

@@ -36,7 +36,7 @@ contract MomContract {
     son.permissionToDate();
   }
 
-  function getAge() public returns (uint) {
+  function getAge() public view returns (uint) {
     return age;
   }
 }

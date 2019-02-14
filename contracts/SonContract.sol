@@ -31,11 +31,11 @@ contract SonContract is Ownable {
     canDate = true;
   }
 
-  function howMuchIsYourAllowance() public returns (uint) {
+  function howMuchIsYourAllowance() public view returns (uint) {
     return daughter.howMuch();
   }
 
-  function howOldAreYou() public returns (uint) {
+  function howOldAreYou() public view returns (uint) {
     return mom.getAge();
   }
 
