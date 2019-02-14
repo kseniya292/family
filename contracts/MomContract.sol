@@ -23,8 +23,20 @@ contract MomContract {
   {
 
     daughter = new DaughterContract(_daughtersName, _daughtersAge);
-    son = new SonContract(_sonsName, _sonsAge);
+    son = new SonContract(_sonsName, _sonsAge, daughter, address(this));
     name = _momsName;
     age = _momsAge;
+  }
+
+  function allowDaughterToDate() public {
+    daughter.permissionToDate();
+  }
+
+  function allowSonToDate() public {
+    son.permissionToDate();
+  }
+
+  function getAge() public returns (uint) {
+    return age;
   }
 }
